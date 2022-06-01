@@ -1,0 +1,30 @@
+<div class="container w-25 mt-5 shadow">
+    <form  [formGroup]="loginForm" (ngSubmit)="SubmitLoginForm()">
+        <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show m-2" role="alert">
+            <strong>Login failed!!!</strong> invalid credentials
+            <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <div class="login-form">
+            <h1 class="text-center">Login</h1>
+            <label for="fristName">Email<span class="mandatory">*</span></label>
+            <input type="email" name="email" id="email" class="form-control" formControlName="email">
+            <div *ngIf="getEmail().invalid&&getEmail().touched">
+                <div *ngIf="getEmail().errors.required">
+                    <span class="text-danger">Email is required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fristName">Password<span class="mandatory">*</span></label>
+                <input type="password" name="password" id="password" class="form-control" formControlName="password">
+                <div *ngIf="getPassword().invalid&&getPassword().touched">
+                    <div *ngIf="getPassword().errors.required">
+                        <span class="text-danger">password is required</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-2">
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </div>
+        </div>
+    </form>
+</div>

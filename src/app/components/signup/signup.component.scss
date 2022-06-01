@@ -1,0 +1,16 @@
+.signup-from{
+    margin: auto;
+}
+input[type="text"],input[type="email"],input[type="password"],input[type="number"]{
+    box-shadow:none;
+
+}
+.mandatory{
+    color: rgb(233, 15, 15);
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+input.ng-valid.ng-touched{
+    border: 1px solid green;
+}

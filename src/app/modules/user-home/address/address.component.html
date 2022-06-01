@@ -1,0 +1,65 @@
+<div class="container   mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="address-form shadow ">
+                <h3 class="text-center bg-primary text-white p-3">Address</h3>
+                <form [formGroup]="userAddress" (ngSubmit)="saveAddress()">
+                    <div class="form-group">
+                        <input type="text" name="address" id="address" class="form-control" placeholder="City"
+                            formControlName="city">
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="text" name="country" id="country" class="form-control" placeholder="Country"
+                            formControlName="country">
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="number" name="number" id="number" class="form-control" placeholder="Pincode"
+                            formControlName="pincode">
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="text" name="landmark" id="landmark" class="form-control" placeholder="Landmark"
+                            formControlName="landmark">
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="text" name="streetname" id="streetname" class="form-control"
+                            placeholder="StreetName" formControlName="streetName">
+                    </div>
+                    <div class="form-group mt-2">
+                        <button type="submit"  class="btn btn-primary m-2" *ngIf="!hideButton">save</button>
+                        <button type="button" class="btn btn-primary m-2 "
+                            (click)="getUserAddress()">viewAddress</button>
+                        <button type="button" class="btn btn-primary" *ngIf="hideButton" (click)="onUpdate()" >UpdateAddress</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6" *ngIf="hideTable">
+            <div class="table shadow  p-5">
+                <table class="table table-bordered table-custom table-striped table-responsive">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th>City</th>
+                            <th>Country</th>
+                            <th>Pincode</th>
+                            <th>Landmark</th>
+                            <th>StreetName</th>
+                            <th>Delete</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let address of addressArr">
+                        <tr>
+                            <td>{{address.city}}</td>
+                            <td>{{address.country}}</td>
+                            <td>{{address.pincode}}</td>
+                            <td>{{address.landmark}}</td>
+                            <td>{{address.streetName}}</td>
+                            <td><i class="fa-solid fa-trash fa-2x" (click)="onDelete(address.id)"></i></td>
+                            <td><i class="fa-solid fa-pen-to-square fa-2x" (click)="updateAddress(address.id)"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

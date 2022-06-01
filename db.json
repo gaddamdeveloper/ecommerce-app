@@ -1,0 +1,125 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "mobile",
+      "shortdescription": "samsung Galaxy M21",
+      "price": 14000
+    },
+    {
+      "id": 1,
+      "name": "mobile",
+      "shortdescription": "samsung Galaxy M21",
+      "price": 14000
+    },
+    {
+      "id": 2,
+      "name": "mobile",
+      "shortdescription": "samsung Galaxy M21",
+      "price": 14000
+    },
+    {
+      "id": 3,
+      "name": "mobile",
+      "shortdescription": "samsung Galaxy M21",
+      "price": 14000
+    },
+    {
+      "id": 4,
+      "name": "mobile",
+      "shortdescription": "samsung Galaxy M21",
+      "price": 14000
+    }
+  ],
+  "user": [
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "password": "",
+      "mobileNumber": "",
+      "id": 1
+    },
+    {
+      "firstName": "Vamshi",
+      "lastName": "gaddam",
+      "email": "vamshireddygaddam33@gmail.com",
+      "password": "vam@123",
+      "mobileNumber": 9491112941,
+      "id": 2
+    },
+    {
+      "firstName": "abhi",
+      "lastName": "abhinay",
+      "email": "abhi@gmail.com",
+      "password": "abhi@123",
+      "mobileNumber": 9491112941,
+      "id": 3
+    },
+    {
+      "firstName": "naresh",
+      "lastName": "karra",
+      "email": "naresh@gmail.com",
+      "password": "nar@123",
+      "mobileNumber": 9052002245,
+      "id": 4
+    },
+    {
+      "firstName": "akhil",
+      "lastName": "adepu",
+      "email": "akhil@gmail.com",
+      "password": "1235",
+      "mobileNumber": 949111291,
+      "id": 5
+    },
+    {
+      "FristName": "gadam",
+      "LastName": "vamshi",
+      "email": "vamshireddygaddam33@gmail.com",
+      "password": "vam@123",
+      "id": 6
+    }
+  ],
+  "address": [
+    {
+      "city": "chntk",
+      "country": "usa",
+      "pincode": 505252,
+      "landmark": "knr",
+      "streetName": "Slade Line",
+      "id": 5
+    },
+    {
+      "city": "kpr",
+      "country": "canada",
+      "pincode": 50525,
+      "landmark": "policestation",
+      "streetName": "",
+      "id": 6
+    },
+    {
+      "city": "gdk",
+      "country": "australia",
+      "pincode": 50525,
+      "landmark": "kukatpally",
+      "streetName": " hannah street longsight",
+      "id": 7
+    },
+    {
+      "city": "jgtl",
+      "country": "india",
+      "pincode": 25014,
+      "landmark": "kukatpally",
+      "streetName": "25 Bickerdike Avenue",
+      "id": 8
+    },
+    {
+      "city": "andhra",
+      "country": "usa",
+      "pincode": 25242,
+      "landmark": "kukatpally",
+      "streetName": "Slade Line",
+      "id": 9
+    }
+  ]
+}

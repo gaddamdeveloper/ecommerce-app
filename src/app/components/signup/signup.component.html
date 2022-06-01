@@ -1,0 +1,60 @@
+<div class="container">
+<form [formGroup]="signUpForm" (ngSubmit)="submitSignUpForm()">
+    <div class="signup-from w-50 shadow mt-5 p-3">
+        <h1 class="text-center">Create Account</h1>
+        <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Login success!</strong> created successfully!!!
+            <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+    <div class="form-group mt-2">
+        <label for="firstName">First Name<span class="mandatory">*</span></label>
+        <input type="text" name="firstName"  id="firstName" class="form-control" formControlName="firstName">
+        <div *ngIf="getFirstName().invalid&&getFirstName().touched">
+            <div *ngIf="getFirstName().errors.required">
+                <span class="text-danger">firstname is required</span>
+            </div>
+        </div>           
+    </div>
+    <div class="form-group mt-2">
+        <label for="lastName">Last Name<span class="mandatory">*</span></label>
+        <input type="text" name="lastName"  id="lastName" class="form-control" formControlName="lastName">
+        <div *ngIf="getLastName().invalid&&getLastName().touched">
+            <div *ngIf="getLastName().errors.required">
+                <span class="text-danger">lastname is required</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group mt-2">
+        <label for="fristName">Email<span class="mandatory">*</span></label>
+        <input type="email" name="email"  id="email" class="form-control" formControlName="email">
+        <div *ngIf="getEmail().invalid&&getEmail().touched">
+            <div *ngIf="getEmail().errors.required">
+                <span class="text-danger">Email is required</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group mt-2">
+        <label for="fristName">Password<span class="mandatory">*</span></label>
+        <input type="password" name="password"  id="password" class="form-control" formControlName="password">
+        <div *ngIf="getPassword().invalid&&getPassword().touched">
+            <div *ngIf="getPassword().errors.required">
+                <span class="text-danger">password is required</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group mt-2">
+        <label for="fristName">MobileNumber<span class="mandatory">*</span></label>
+        <input type="number" name="number"  id="number" class="form-control" formControlName="mobileNumber">
+        <div *ngIf="getMobileNumber().invalid&&getMobileNumber().touched">
+            <div *ngIf="getMobileNumber().errors.required">
+                <span class="text-danger">mobileNumber is required</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mt-2">
+        <button type="submit" class="btn btn-dark w-100">Save</button>
+      </div>
+    </div>
+</form>
+</div>

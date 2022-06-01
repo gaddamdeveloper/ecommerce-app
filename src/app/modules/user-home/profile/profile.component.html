@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="my-profile p-5 shadow bg-white" *ngFor="let user of userArr">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img-profile">
+                    <img src="./../../../../assets/images/myProfile.jpg"
+                        width="50%" height="50%" alt="profile">
+                </div>
+                <div class="profil-name mt-2">
+                    <h3>{{user.firstName}}</h3>
+                </div>
+                <div class="profile-info">
+                    <p>spotify New York <span><button
+                                class="btn btn-light text-primary btn-sm bg-custom">Primary</button></span></p>
+                    <h6>170 willam street</h6>
+                    <h6>New York,NY 2022-21-12</h6>
+                    <p>Metrooplitan<span><button
+                     class="btn btn-light text-primary btn-sm bg-custom">secondary</button></span></p>
+                    <p>musem</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-address">
+                    <p><span class="fw-bold">Phone:</span>9491112941</p>
+                    <p><span class="fw-bold">Address:</span>m125sz,jyothinagar</p>
+                    <p><span class="fw-bold">Email:</span>{{user.email}}</p>
+                    <p><span class="fw-bold">Site:</span>www.bootstrap.com</p>
+                    <h4><span class="fw-bold">Basic Information</span></h4>
+                    <p><span class="fw-bold">Birthday:</span>sep 24,1997</p>
+                    <p><span class="fw-bold">Gender:</span>male</p>
+                    <button class="btn btn-primary" (click)="update(user.id)">update<i
+                            class="fa-solid fa-pen-to-square"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
